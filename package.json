@@ -1,0 +1,22 @@
+{
+  "name": "live_streaming",
+  "version": "1.0.0",
+  "description": "landing page",
+  "main": "index.html",
+  "scripts": {
+    "start": "sass --style=expanded --watch styles:public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlterLego1/live_streaming.git"
+  },
+  "author": "Alter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlterLego1/live_streaming/issues"
+  },
+  "homepage": "https://github.com/AlterLego1/live_streaming#readme",
+  "devDependencies": {
+    "sass": "^1.97.3"
+  }
+}
