@@ -1,0 +1,97 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use 'placeholders';
+@use 'sass:color';
+
+.hero{
+    position: relative;
+    padding: 150px 0 0;
+    max-width: 1340px;
+    height: 870px;
+    margin: 0 auto;
+    background: url(../assets/webp/cloude.webp) center/contain no-repeat;
+
+    &__content{
+        position: relative;
+        margin: 0 auto;
+        width: 930px;
+
+        .hero__title{
+          @include m.font(120px, 700, v.$color_black);
+          line-height: 1;
+        }
+
+        .hero__action-btn{
+            width: 380px;
+            height: 80px;
+            background-color: v.$color_black;
+            border-radius: 50px;
+            border: none;
+            outline: none;
+            @include m.font(28px, 500, v.$color_white);
+            @include m.position(absolute, 1, -1, bottom, right, 25px, 0);
+
+            &:hover{
+              background-color: color.adjust(v.$color_black, $alpha: -0.20);
+              cursor: pointer;
+            }
+
+            &:focus-visible{
+                outline: 2px solid v.$color_white;
+            }
+        }
+    }
+    &__notify{
+        position: relative;
+        margin: 180px auto 0;
+        height: 70px;
+        width: 685px;
+        background-color: color.adjust(v.$color_white, $alpha: -0.80);
+        border-radius: 50px;
+        @include m.d-flex(end, center, row, nowrap, 0, 15px);  
+
+        &-img{
+          @include m.position(absolute, 1, -1, bottom, left, -55px, -20px);
+        }
+
+        &-desc{
+            width: 450px;
+            height: 100%;
+            line-height: 1;
+            border-right: 1px solid v.$color_white;
+            @include m.font(14px, 400, v.$color_black);
+            @include m.d-flex(center, center);  
+        }
+
+        &-btn{
+            border: none;
+            background: none;
+            outline: none;
+            @include m.font(25px, 400, v.$color_black);
+            @extend %hover-white;
+
+            &:focus-visible{
+                outline: 2px solid v.$color_white;
+                border-radius: 30px;
+            }
+        }
+    }
+    &__scroll{
+        @include m.position(absolute, 1, -1, bottom, left, 180px, 10px);
+        &-content{
+            position: relative;
+            writing-mode: vertical-rl;
+            @include m.font(16px, 500, v.$color_white);
+            cursor: pointer;
+
+            &::before{
+              content: "";
+              display: block;
+              @include m.position(absolute, 1, -1, top, left, 95px, 7.5px);
+              height: 75px;
+              width: 1px;
+              background-color: v.$color_white;
+            }
+        }
+    }
+}

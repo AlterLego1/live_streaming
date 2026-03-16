@@ -13,7 +13,7 @@ body {
   margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5, h6, ul {
+h1, h2, h3, h4, h5, h6, ul, p {
   margin: 0;
   padding: 0;
 }
@@ -29,6 +29,10 @@ a {
 
 .header .nav__title-link:hover, .header .nav__links .list__item-link:hover, .header .nav .covid__link:hover {
   color: #000;
+}
+
+.hero__notify-btn:hover {
+  color: #FFF;
 }
 
 .header .nav .globe__link-icon:hover {
@@ -131,6 +135,131 @@ a {
   width: 27px;
   height: 28px;
   fill: #FFF;
+}
+
+.hero {
+  position: relative;
+  padding: 150px 0 0;
+  max-width: 1340px;
+  height: 870px;
+  margin: 0 auto;
+  background: url(../assets/webp/cloude.webp) center/contain no-repeat;
+}
+.hero__content {
+  position: relative;
+  margin: 0 auto;
+  width: 930px;
+}
+.hero__content .hero__title {
+  font-size: 120px;
+  font-weight: 700;
+  font-style: normal;
+  color: #000;
+  line-height: 1;
+}
+.hero__content .hero__action-btn {
+  width: 380px;
+  height: 80px;
+  background-color: #000;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  font-size: 28px;
+  font-weight: 500;
+  font-style: normal;
+  color: #FFF;
+  position: absolute;
+  z-index: 1;
+  inset: -1;
+  bottom: 25px;
+  right: 0;
+}
+.hero__content .hero__action-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+.hero__content .hero__action-btn:focus-visible {
+  outline: 2px solid #FFF;
+}
+.hero__notify {
+  position: relative;
+  margin: 180px auto 0;
+  height: 70px;
+  width: 685px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  row-gap: 0;
+  column-gap: 15px;
+}
+.hero__notify-img {
+  position: absolute;
+  z-index: 1;
+  inset: -1;
+  bottom: -55px;
+  left: -20px;
+}
+.hero__notify-desc {
+  width: 450px;
+  height: 100%;
+  line-height: 1;
+  border-right: 1px solid #FFF;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  row-gap: 0;
+  column-gap: 0;
+}
+.hero__notify-btn {
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 25px;
+  font-weight: 400;
+  font-style: normal;
+  color: #000;
+}
+.hero__notify-btn:focus-visible {
+  outline: 2px solid #FFF;
+  border-radius: 30px;
+}
+.hero__scroll {
+  position: absolute;
+  z-index: 1;
+  inset: -1;
+  bottom: 180px;
+  left: 10px;
+}
+.hero__scroll-content {
+  position: relative;
+  writing-mode: vertical-rl;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  color: #FFF;
+  cursor: pointer;
+}
+.hero__scroll-content::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  inset: -1;
+  top: 95px;
+  left: 7.5px;
+  height: 75px;
+  width: 1px;
+  background-color: #FFF;
 }
 
 /*# sourceMappingURL=index.css.map */
