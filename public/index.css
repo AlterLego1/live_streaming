@@ -181,6 +181,52 @@ a {
 .hero__content .hero__action-btn:focus-visible {
   outline: 2px solid #FFF;
 }
+@media (max-width: 992px) {
+  .hero__content {
+    width: 100%;
+    max-width: 760px;
+    height: 500px;
+  }
+  .hero__content .hero__title {
+    font-size: 100px;
+    font-weight: 700;
+    font-style: normal;
+    color: #000;
+  }
+  .hero__content .hero__action-btn {
+    width: 300px;
+    height: 70px;
+    font-size: 24px;
+    font-weight: 500;
+    font-style: normal;
+    color: #FFF;
+    position: absolute;
+    z-index: 1;
+    inset: -1;
+    bottom: 0;
+    left: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .hero__content {
+    max-width: 560px;
+    height: 350px;
+  }
+  .hero__content .hero__title {
+    font-size: 70px;
+    font-weight: 700;
+    font-style: normal;
+    color: #000;
+  }
+  .hero__content .hero__action-btn {
+    width: 270px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    color: #FFF;
+  }
+}
 .hero__notify {
   position: relative;
   margin: 180px auto 0;
@@ -233,6 +279,46 @@ a {
   outline: 2px solid #FFF;
   border-radius: 30px;
 }
+@media (max-width: 768px) {
+  .hero__notify {
+    margin: 140px auto 0;
+    height: fit-content;
+    width: 100%;
+    max-width: 430px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 0;
+    column-gap: 0;
+  }
+  .hero__notify-img {
+    position: absolute;
+    z-index: 1;
+    inset: -1;
+    bottom: 10px;
+    left: -20px;
+  }
+  .hero__notify-desc {
+    width: 100%;
+    padding: 15px 10px 15px 100px;
+    border-right: none;
+    border-bottom: 1px solid #FFF;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    color: #000;
+  }
+  .hero__notify-btn {
+    padding: 15px 0;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    color: #000;
+  }
+}
 .hero__scroll {
   position: absolute;
   z-index: 1;
@@ -260,6 +346,36 @@ a {
   height: 75px;
   width: 1px;
   background-color: #FFF;
+}
+@media (max-width: 992px) {
+  .hero__scroll {
+    position: absolute;
+    z-index: 1;
+    inset: -1;
+    bottom: 120px;
+    left: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .hero__scroll {
+    position: absolute;
+    z-index: 1;
+    inset: -1;
+    bottom: 200px;
+    left: 10px;
+  }
+}
+@media (max-width: 992px) {
+  .hero {
+    padding: 120px 0 0;
+    background: url(../assets/webp/cloude.webp) 0 30%/contain no-repeat;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 0 0;
+    height: 800px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

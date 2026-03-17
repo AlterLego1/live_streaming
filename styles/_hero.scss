@@ -40,6 +40,34 @@
                 outline: 2px solid v.$color_white;
             }
         }
+        @media(max-width: v.$media_lg){
+            width: 100%;
+            max-width: 760px;
+            height: 500px;
+
+          .hero__title{
+          @include m.font(100px, 700, v.$color_black);
+          }
+          .hero__action-btn{
+            width: 300px;
+            height: 70px;
+            @include m.font(24px, 500, v.$color_white);
+            @include m.position(absolute, 1, -1, bottom, left, 0, 10px);
+          }
+        }
+         @media(max-width: v.$media_md){
+            max-width: 560px;
+            height: 350px;
+
+          .hero__title{
+          @include m.font(70px, 700, v.$color_black);
+          }
+          .hero__action-btn{
+            width: 270px;
+            height: 60px;
+            @include m.font(20px, 500, v.$color_white);
+          }
+        }
     }
     &__notify{
         position: relative;
@@ -75,6 +103,32 @@
                 border-radius: 30px;
             }
         }
+         @media(max-width: v.$media_md){
+            margin: 140px auto 0;
+            height: fit-content;
+            width: 100%;
+            max-width: 430px;
+            border-radius: 20px;
+            @include m.d-flex(start, center, column, nowrap, 0, 0);
+
+            &-img{
+           @include m.position(absolute, 1, -1, bottom, left, 10px, -20px);
+          }
+
+            &-desc{
+            width: 100%;
+            padding: 15px 10px 15px 100px;
+            border-right: none;
+            border-bottom: 1px solid v.$color_white;
+            @include m.font(12px, 400, v.$color_black); 
+           }
+
+            &-btn{
+            padding: 15px 0;
+            @include m.font(30px, 400, v.$color_black);
+        }
+
+        }
     }
     &__scroll{
         @include m.position(absolute, 1, -1, bottom, left, 180px, 10px);
@@ -93,5 +147,21 @@
               background-color: v.$color_white;
             }
         }
+         @media(max-width: v.$media_lg){
+            @include m.position(absolute, 1, -1, bottom, left, 120px, 10px);
+        }
+
+         @media(max-width: v.$media_md){
+            @include m.position(absolute, 1, -1, bottom, left, 200px, 10px);
+        }
     }
+     @media(max-width: v.$media_lg){
+            padding: 120px 0 0;
+            background: url(../assets/webp/cloude.webp) 0 30%/contain no-repeat;
+        }
+
+         @media(max-width: v.$media_md){
+            padding: 100px 0 0;
+            height: 800px;
+        }
 }
