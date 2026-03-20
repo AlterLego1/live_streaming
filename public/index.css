@@ -13,7 +13,7 @@ body {
   margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5, h6, ul, p {
+h1, h2, h3, h4, h5, h6, ul, p, figure {
   margin: 0;
   padding: 0;
 }
@@ -375,6 +375,164 @@ a {
   .hero {
     padding: 100px 0 0;
     height: 800px;
+  }
+}
+
+.work-section {
+  padding: 50px 0 180px;
+}
+.work-section .work {
+  text-align: center;
+  margin: 0 auto;
+}
+.work-section .work__title {
+  font-size: 60px;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFF;
+  margin: 0 0 80px;
+}
+@media (max-width: 428px) {
+  .work-section .work__title {
+    display: none;
+  }
+}
+.work-section .work__card-wrapper {
+  margin: 0 auto;
+  max-width: 930px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "analysis design development" "maintenance testing integration";
+  justify-items: center;
+  align-items: center;
+  row-gap: 65px;
+}
+.work-section .work__card-wrapper .card--analysis {
+  grid-area: analysis;
+  justify-self: start;
+}
+.work-section .work__card-wrapper .card--design {
+  grid-area: design;
+}
+.work-section .work__card-wrapper .card--development {
+  grid-area: development;
+  justify-self: end;
+}
+.work-section .work__card-wrapper .card--maintenance {
+  grid-area: maintenance;
+  justify-self: start;
+}
+.work-section .work__card-wrapper .card--testing {
+  grid-area: testing;
+}
+.work-section .work__card-wrapper .card--integration {
+  grid-area: integration;
+  justify-self: end;
+}
+.work-section .work__card-wrapper .icon-lamp {
+  width: 28px;
+  height: 41px;
+}
+.work-section .work__card-wrapper .icon-brash {
+  width: 48px;
+  height: 39px;
+}
+.work-section .work__card-wrapper .icon-dev {
+  width: 51px;
+  height: 32px;
+}
+.work-section .work__card-wrapper .icon-wrench {
+  width: 43px;
+  height: 41px;
+}
+.work-section .work__card-wrapper .icon-test {
+  width: 44px;
+  height: 42px;
+}
+.work-section .work__card-wrapper .icon-int {
+  width: 44px;
+  height: 42px;
+}
+@media (max-width: 768px) {
+  .work-section .work__card-wrapper {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "development analysis" "design maintenance" "integration testing";
+  }
+  .work-section .work__card-wrapper .card--analysis, .work-section .work__card-wrapper .card--design, .work-section .work__card-wrapper .card--development, .work-section .work__card-wrapper .card--maintenance,
+  .work-section .work__card-wrapper .card--maintenance, .work-section .work__card-wrapper .card--testing, .work-section .work__card-wrapper .card--integration {
+    justify-self: center;
+  }
+}
+
+.info-card {
+  width: 180px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 25px 10px 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  row-gap: 15px;
+  column-gap: 0;
+}
+.info-card__icon {
+  width: 30px;
+  height: 30px;
+  fill: #000;
+}
+.info-card__title {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  color: #000;
+}
+.info-card__description {
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  color: #000;
+  text-align: center;
+}
+.info-card:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+.info-card:hover .info-card__icon {
+  fill: #FFF;
+}
+.info-card:hover .info-card__title {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  color: #FFF;
+}
+.info-card:hover .info-card__description {
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  color: #FFF;
+}
+@media (max-width: 428px) {
+  .info-card {
+    width: 140px;
+    height: 180px;
+  }
+  .info-card__title {
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    color: #000;
+  }
+  .info-card__description {
+    font-size: 12px;
+    font-weight: 300;
+    font-style: normal;
+    color: #000;
   }
 }
 
