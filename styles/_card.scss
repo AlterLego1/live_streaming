@@ -55,3 +55,49 @@
   }
         }
 }
+
+.img-card{
+  position: relative;
+  @include m.d-flex(center, center, column, nowrap); 
+  width: 320px;
+  height: 295px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: color.adjust(v.$color_white, $alpha: -0.90);
+
+  &__title{
+    @include m.font(23px, 400, v.$color_white);
+    @include m.d-flex(center, center, column, nowrap); 
+    flex-grow: 1;
+  }
+  &__preview{
+    width: 100%;
+  }
+  &__btn{
+    width: 120px;
+    height: 90px;
+    background-color: v.$color_white;
+    border-radius: 20px;
+    border: none;
+    rotate: 7deg;
+    @include m.position(absolute, 1, -1, bottom, left, -25px, -30px);
+    transition: scale 0.2s;
+
+    &:hover{
+      cursor: pointer;
+      scale: 1.4;
+    }
+
+    &-icon{
+      width: 36px;
+      height: 23px;
+      rotate: -7deg;
+      translate: 13px -10px;
+    }
+
+  }
+  &:hover{
+    cursor: pointer;
+    box-shadow: 0 10px 20px 15px rgba(0, 0, 0, 0.212), inset 0 30px 40px 25px rgba(0, 0, 0, 0.212);
+  }
+}
