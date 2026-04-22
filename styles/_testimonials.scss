@@ -1,0 +1,101 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use 'placeholders';
+@use 'sass:color';
+
+.testimonials{
+    padding: 100px 0 100px;
+    margin: 0 auto;
+    @include m.d-flex(start,center,column,nowrap,90px,0); 
+
+    &__title{
+        @include m.font(60px, 400, v.$color_white);
+         @media(max-width: v.$media_sm){
+             @include m.font(35px, 400, v.$color_white);
+        }
+    }
+
+    .slider{
+        position: relative;
+        height: 500px;
+        &__left-btn{
+           @extend %sliders-btn;
+           @include m.position(absolute, 1, -1, bottom, left, 310px, -100px);
+            &:hover{
+            cursor: pointer;
+            box-shadow: inset 0 0 15px 5px rgba(0, 0, 0, 0.205);
+            .slider__left-btn-icon{
+            fill: v.$color_black;
+         }
+            }
+         &-icon{
+            fill: v.$color_white;
+            rotate: -135deg;
+            width: 36px;
+            height: 23px;
+         }
+        }
+        &__right-btn{
+           @extend %sliders-btn;
+           @include m.position(absolute, 1, -1, bottom, right, 310px, -100px);
+           &:hover{
+            cursor: pointer;
+            box-shadow: inset 0 0 15px 5px rgba(0, 0, 0, 0.205);
+            .slider__right-btn-icon{
+            fill: v.$color_black;
+         }
+           }
+         &-icon{
+            rotate: 45deg;
+            width: 36px;
+            height: 23px;
+            fill: v.$color_white;
+         }
+        }
+        &__points{
+            @include m.d-flex(center,center,row,nowrap,0,9px); 
+            @include m.position(absolute, 1, -1, bottom, left, 0, 50%);
+            translate: -50% 0;
+            &-item{
+                height: 13px;
+                width: 13px;
+                background-color: v.$color_white;
+                border-radius: 50%;
+                &:hover{
+                    cursor: pointer;
+                    background-color: v.$color_sand;
+                    scale: 0.7;
+                }
+            }
+        }
+        @media(max-width: v.$media_md){
+             height: 400px;
+           &__left-btn{
+           bottom: -25px;
+           left: 80px;
+           
+        }
+        &__right-btn{
+            bottom: -25px;
+            right: 80px;
+        }
+        }
+         @media(max-width: v.$media_sm){
+             height: 260px;
+              &__left-btn{
+           left: -10px;
+           
+        }
+        &__right-btn{
+            right: -10px;
+        }
+        }
+    }
+    @media(max-width: v.$media_md){
+            @include m.d-flex(start,center,column,nowrap,75px,0); 
+             padding: 50px 0 100px;
+    }
+    @media(max-width: v.$media_sm){
+            @include m.d-flex(start,center,column,nowrap,60px,0); 
+    }
+}

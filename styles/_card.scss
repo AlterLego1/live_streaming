@@ -101,3 +101,32 @@
     box-shadow: 0 10px 20px 15px rgba(0, 0, 0, 0.212), inset 0 30px 40px 25px rgba(0, 0, 0, 0.212);
   }
 }
+.wave-card{
+  width: 500px;
+  height: 275px;
+  background: url(../assets/webp/Rectangle9.webp) center/cover no-repeat;
+  @include m.d-flex(start,start,column,nowrap,25px,0); 
+   &__avatar{
+    margin: 20px 0 0 30px;
+   border-radius: 50%;
+   overflow: hidden;
+   }
+   &__desc{
+    @include m.font(20px, 400, v.$color_white);
+    margin: 0 70px 0 55px;
+    line-height: 1.4;
+   }
+         @media(max-width: v.$media_sm){
+          @include m.d-flex(start,start,column,nowrap,15px,0);
+             width: 320px;
+             height: 175px;
+             &__avatar{
+              margin: 15px 0 0 20px;
+          }
+        &__desc{
+        @include m.font(14px, 400, v.$color_white);
+        margin: 0 30px 0 25px;
+        line-height: 1.1;
+        }
+    }
+}
