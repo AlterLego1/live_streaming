@@ -3,7 +3,7 @@
 @use 'sass:color';
 
 .experience{
-    padding: 200px 0 290px;
+    padding: 200px 0 150px;
     margin: 0 auto;
     @include m.d-flex(start, center, column, nowrap, 95px, 0); 
 
