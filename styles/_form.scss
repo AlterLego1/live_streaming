@@ -1,0 +1,77 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use 'placeholders';
+
+.form-section{
+    position: relative;
+    padding: 180px 20px 150px;
+    overflow: hidden;
+
+    &__wrapper{
+       margin: 0 auto;
+       width: 100%;
+       height: 375px;
+       @include m.d-flex(center, start, row, nowrap, 0, 0);  
+
+       .form{
+        width: min(620px, 100%);
+        @include m.d-flex(start, center, column, nowrap, 23px, 0);  
+
+        &__title{
+            @include m.font(36px, 400, v.$color_black);
+             @media(max-width: v.$media_md){
+             max-width: 340px;
+             text-align: center;
+         }
+          @media(max-width: v.$media_min){
+             @include m.font(32px, 400, v.$color_black);
+         }
+        }
+        &__name,
+        &__email,
+        &__text{
+            width: 100%;
+            height: 47px;
+            border-radius: 20px;
+            border: 1px solid v.$color_sand;
+            @include m.font(25px, 300, v.$color_black);
+            padding: 1em;
+             @media(max-width: v.$media_min){
+             @include m.font(18px, 300, v.$color_black);
+         }
+        }
+        &__btn{
+             width: 100%;
+            height: 47px;
+            border-radius: 20px;
+            border: none;
+            @include m.font(26px, 500, v.$color_white);
+            background-color: v.$color_black;
+            cursor: pointer;
+
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+       }
+    }
+    &__cloud-bg{
+        width: 700px;
+        height: 250px;
+        background: url(../assets/webp/cloud.webp) center/contain no-repeat;
+
+    }
+     .cloud--left{
+         @include m.position(absolute, 1, -1, top, left, 0, -300px);
+         @media(max-width: v.$media_md){
+            top: -50px;
+         }
+       } 
+       .cloud--right{
+        rotate: y 180deg;
+         @include m.position(absolute, 1, -1, bottom, right, 0, -300px);
+         @media(max-width: v.$media_md){
+            bottom: -50px;
+         }
+       } 
+}
