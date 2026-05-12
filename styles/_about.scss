@@ -96,9 +96,14 @@
 
             @media(max-width:v.$media_md){
                &::before{
-                @include m.position(absolute, -1, -1, top, left, 100px, -220px);
-                rotate: z 50deg;
+                width: 100%;
+                @include m.position(absolute, -1, -1, top, left, 100px, -165px);
                }
+            @media(max-width:v.$media_sm){
+               &::before{
+                @include m.position(absolute, -1, -1, top, left, 100px, -100px);
+               }
+              }
              &-title{
              @include m.font(35px, 400, v.$color_white);
            }
@@ -143,7 +148,7 @@
            }
 
              @media(max-width:v.$media_md){
-               padding: 100px 0 0 15px;
+               padding: 70px 0 0 15px;
                background: url(../assets/webp/image\ 7.webp) 100% 100%/380px no-repeat;
                 &-title{
              @include m.font(35px, 400, v.$color_white);

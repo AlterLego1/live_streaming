@@ -18,6 +18,11 @@
         fill: v.$color_black;
     }
 }
+%hover-black-stroke{
+    &:hover{
+        stroke: v.$color_black;
+    }
+}
 %sliders-btn{
     width: 66px;
     height: 66px;
